@@ -31,3 +31,10 @@ jobs:
         run: mvn jacoco:report
         working-directory: ./back
 
+      - name: Upload JaCoCo report
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: back/target/site/jacoco/
+
+
