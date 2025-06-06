@@ -74,5 +74,6 @@ jobs:
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar 
           -Dsonar.projectKey=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Back
           -Dsonar.projectName="BobApp Back"
+        working-directory: ./back
 
 
