@@ -55,7 +55,7 @@ jobs:
         working-directory: ./front
 
       - name: Run front-end tests
-        run: npm run test:ci --coverage
+        run: npm run test:ci
         working-directory: ./front
 
       - name: Upload front-end coverage report
