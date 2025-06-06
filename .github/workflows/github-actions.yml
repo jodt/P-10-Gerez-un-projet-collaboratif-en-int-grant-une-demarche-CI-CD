@@ -27,3 +27,7 @@ jobs:
         run: mvn clean verify
         working-directory: ./back
 
+      - name: Generate JaCoCo coverage report
+        run: mvn jacoco:report
+        working-directory: ./back
+
