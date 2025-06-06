@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -35,3 +35,21 @@ jobs:
         with:
           name: frontend-coverage-report
           path: front/coverage/bobapp/
+
+  sonar-analysis:
+    name: Sonarcloud Analysis
+    runs-on: ubuntu-latest
+    needs: front
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        with:
+          projectBaseDir: ./front
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
