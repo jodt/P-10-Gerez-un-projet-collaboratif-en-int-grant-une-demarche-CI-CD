@@ -47,6 +47,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Download coverage report from previous job
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-coverage-report
+          path: front/coverage/bobapp
+
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         with:
