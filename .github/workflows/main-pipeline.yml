@@ -8,10 +8,12 @@ jobs:
   ci-back:
     name: CI Back
     uses: ./.github/workflows/ci-back.yml
+    secrets: inherit
 
   ci-front:
     name: CI Front
     uses: ./.github/workflows/ci-front.yml
+    secrets: inherit
 
   deploy:
     name: Deploy to Docker
@@ -19,3 +21,4 @@ jobs:
       - ci-back
       - ci-front
     uses: ./.github/workflows/deploy.yml
+    secrets: inherit
