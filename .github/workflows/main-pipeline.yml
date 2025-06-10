@@ -1,0 +1,21 @@
+name: BobApp CI/CD Pipeline
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ci-back:
+    name: CI Back
+    uses: ./.github/workflows/ci-back.yml
+
+  ci-front:
+    name: CI Front
+    uses: ./.github/workflows/ci-front.yml
+
+  deploy:
+    name: Deploy to Docker
+    needs:
+      - ci-back
+      - ci-front
+    uses: ./.github/workflows/deploy.yml

@@ -1,6 +1,7 @@
 name: CI Back
 
 on:
+  workflow_call:
   push:
     branches:
       - feat/github-actions
