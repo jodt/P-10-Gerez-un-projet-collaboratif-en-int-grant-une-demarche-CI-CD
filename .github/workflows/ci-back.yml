@@ -3,7 +3,6 @@ name: CI Back
 on:
   push:
     branches:
-      - main
       - feat/github-actions
   pull_request:
     branches:
