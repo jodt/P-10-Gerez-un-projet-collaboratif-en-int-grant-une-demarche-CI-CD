@@ -1,7 +1,9 @@
 name: BobApp Deploy
 
 on:
-  workflow_call:
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
