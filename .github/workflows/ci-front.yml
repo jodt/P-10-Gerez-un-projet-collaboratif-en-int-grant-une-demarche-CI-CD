@@ -1,7 +1,9 @@
 name: CI Front
 
 on:
-  workflow_call:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   front:
