@@ -4,14 +4,20 @@ on:
     branches:
       - main
 
+  pull_request:
+    branches:
+      - main
+
 jobs:
   ci-back:
     name: CI Back
+    if: github.event_name == 'pull_request'
     uses: ./.github/workflows/ci-back.yml
     secrets: inherit
 
   ci-front:
     name: CI Front
+    if: github.event_name == 'pull_request'
     uses: ./.github/workflows/ci-front.yml
     secrets: inherit
 
@@ -20,5 +26,6 @@ jobs:
     needs:
       - ci-back
       - ci-front
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     uses: ./.github/workflows/deploy.yml
     secrets: inherit
