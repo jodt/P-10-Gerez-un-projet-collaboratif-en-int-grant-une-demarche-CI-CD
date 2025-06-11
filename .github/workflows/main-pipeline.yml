@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+      - develop
+      - 'feat/**'
 
 jobs:
   ci-back:
@@ -20,5 +22,6 @@ jobs:
     needs:
       - ci-back
       - ci-front
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     uses: ./.github/workflows/deploy.yml
     secrets: inherit

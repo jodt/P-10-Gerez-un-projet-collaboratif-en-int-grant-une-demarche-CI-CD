@@ -2,12 +2,6 @@ name: CI Back
 
 on:
   workflow_call:
-  push:
-    branches:
-      - feat/github-actions
-  pull_request:
-    branches:
-      - main
 
 jobs:
   back:
