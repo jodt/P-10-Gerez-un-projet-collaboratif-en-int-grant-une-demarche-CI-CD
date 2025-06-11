@@ -3,17 +3,21 @@ on:
   push:
     branches:
       - main
-      - develop
-      - 'feat/**'
+
+  pull_request:
+    branches:
+      - main
 
 jobs:
   ci-back:
     name: CI Back
+    if: github.event_name == 'pull_request'
     uses: ./.github/workflows/ci-back.yml
     secrets: inherit
 
   ci-front:
     name: CI Front
+    if: github.event_name == 'pull_request'
     uses: ./.github/workflows/ci-front.yml
     secrets: inherit
 
