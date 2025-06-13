@@ -1,6 +1,9 @@
 name: CI Back
 
 on:
+  push:
+    branches:
+      - 'feat/**'
   pull_request:
     branches:
       - main
