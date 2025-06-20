@@ -67,6 +67,12 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
+      - name: Download JaCoCo XML from previous job
+        uses: actions/download-artifact@v4
+        with:
+          name: jacoco-report
+          path: back/target/site/jacoco/
+
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_BACK }}
