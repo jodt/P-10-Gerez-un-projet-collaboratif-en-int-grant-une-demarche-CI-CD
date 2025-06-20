@@ -18,16 +18,6 @@ Launch Front-end:
 
 > npm run start;
 
-### Docker
-
-Build the container:
-
-> docker build -t bobapp-front .  
-
-Start the container:
-
-> docker run -p 8080:8080 --name bobapp-front -d bobapp-front
-
 ## Back-end
 
 Go inside folder the back folder:
@@ -48,10 +38,10 @@ Launch the tests:
 
 ### Docker
 
-Build the container:
+> docker-compose up
 
-> docker build -t bobapp-back .  
-
-Start the container:
-
-> docker run -p 8080:8080 --name bobapp-back -d bobapp-back 
+### Quality Gate
+#### Front
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Front&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Front)
+#### Back
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Back&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Back)
