@@ -17,8 +17,8 @@ jobs:
     uses: ./.github/workflows/ci-back.yml
     secrets: inherit
 
-  deploy:
+  docker-publish:
     needs: [ ci-front, ci-back ]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    uses: ./.github/workflows/deploy.yml
+    uses: ./.github/workflows/docker-publish.yml
     secrets: inherit

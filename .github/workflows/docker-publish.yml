@@ -1,11 +1,11 @@
-name: BobApp Deploy
+name: Build and Push Docker Images
 
 on:
   workflow_call:
 
 jobs:
-  deploy:
-    name: Deploy to Docker
+  docker-publish:
+    name: Build and Push to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
