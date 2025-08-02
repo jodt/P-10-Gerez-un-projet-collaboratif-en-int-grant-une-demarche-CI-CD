@@ -1,47 +1,72 @@
 # BobApp
 
-Clone project:
+## 📦 Cloner le projet
 
-> git clone XXXXX
+> git clone https://github.com/jodt/P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD.git
 
-## Front-end 
+## 🔹 Front-end
 
-Go inside folder the front folder:
+Accéder au dossier front:
 
 > cd front
 
-Install dependencies:
+Installer les dépendances:
 
 > npm install
 
-Launch Front-end:
+Lancer le front-end :
 
 > npm run start;
 
-## Back-end
+## 🔹 Back-end
 
-Go inside folder the back folder:
+Accéder au dossier du back:
 
 > cd back
 
-Install dependencies:
+Installer les dépendances:
 
 > mvn clean install
 
-Launch Back-end:
+Lancer le back-end:
 
 >  mvn spring-boot:run
 
-Launch the tests:
+Pour exécuter les tests back-end:
 
 > mvn clean install
 
 ### Docker
 
+Vous pouvez lancer l’application complète (front + back) avec:
 > docker-compose up
 
-### Quality Gate
-#### Front
+Taper ensuite l'url http://localhost:4200 dans votre navigateur.
+
+Pour la stopper: 
+> docker-compose down
+
+## ✅ Analyse de la qualité du code (SonarCloud)
+
+L’analyse statique du code est automatisée grâce à SonarCloud à chaque pull request ou push sur la branche main.
+SonarCloud évalue la qualité du nouveau code à l’aide de plusieurs indicateurs : bugs, vulnérabilités, couverture de tests, duplications, etc.
+
+Les badges ci-dessous indiquent le statut de la Quality Gate pour le front-end et le back-end :
+
+### 🔎 Front-end
+
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Front&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Front)
-#### Back
+
+➡️ [Voir l’analyse complète sur SonarCloud](https://sonarcloud.io/summary/new_code?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Front)
+
+### 🔎 Back-end
+
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Back&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Back)
+
+➡️ [Voir l’analyse complète sur SonarCloud](https://sonarcloud.io/summary/new_code?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Back)
+
+## 📄 CI/CD Documentation
+
+Le fonctionnement du pipeline CI/CD, les indicateurs de qualité (KPI), les rapports de couverture, et les décisions techniques sont détaillés dans le document suivant :
+
+📘 [Document explicatif (PDF)](./assets/ci-cd-documentation.pdf)
