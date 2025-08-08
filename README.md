@@ -70,3 +70,7 @@ Les badges ci-dessous indiquent le statut de la Quality Gate pour le front-end e
 Le fonctionnement du pipeline CI/CD, les indicateurs de qualité (KPI), les rapports de couverture, et les décisions techniques sont détaillés dans le document suivant :
 
 📘 [Document explicatif (PDF)](./assets/ci-cd-documentation.pdf)
+
+
+## Auteur
+Joel
