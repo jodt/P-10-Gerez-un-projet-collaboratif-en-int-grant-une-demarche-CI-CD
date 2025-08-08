@@ -57,13 +57,13 @@ Les badges ci-dessous indiquent le statut de la Quality Gate pour le front-end e
 
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Front&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Front)
 
-➡️ [Voir l’analyse complète sur SonarCloud](https://sonarcloud.io/summary/new_code?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Front)
+➡️ [Voir l’analyse globale du code](https://sonarcloud.io/summary/overall?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Front)
 
 ### 🔎 Back-end
 
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Back&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Back)
 
-➡️ [Voir l’analyse complète sur SonarCloud](https://sonarcloud.io/summary/new_code?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Back)
+➡️ [Voir l’analyse globale du code](https://sonarcloud.io/summary/overall?id=P-10-Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD-Back)
 
 ## 📄 CI/CD Documentation
 
@@ -73,4 +73,4 @@ Le fonctionnement du pipeline CI/CD, les indicateurs de qualité (KPI), les rapp
 
 
 ## Auteur
-Joel
+Joel DUMORTIER
